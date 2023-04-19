@@ -6,13 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Залевская Ольга Сергеевна. Лабораторная 5</title>
     <link rel="stylesheet" href="main.css">
+    <script>
+        function showSum() {
+        let a = 5154;
+        let b = 7891;
+        let result = a + b;
+        alert(' Сумма ' + a + ' и ' + b + ' равна ' + result);
+    }
+    </script>
+    <style>
+        .message {
+            height: 30px;
+            width: 250px;
+            background: rgb(223, 189, 189);
+            border: 1mm ridge;
+            display: inline-block;
+            text-align: center;
+            padding: 5px;
+            cursor: pointer;
+
+        }
+    </style>
 </head>
 <body>
     <header>
         НГТУ, ФБ, Лабораторная работа 5
     </header>
     
-    <main></main>
+    <main>
+        <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
+        <div class="message">Узнать,кто автор страницы</div>
+    </main>
    
     <footer>
         &copy; Залевская Ольга, ФБИ&ndash;14, 2 курс, 2023
