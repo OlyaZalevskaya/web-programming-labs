@@ -17,7 +17,11 @@ header:hover{
 }
 header:active{
     font-size: 10pt;
-    color: rgb(4, 68, 4);
+    color: rgb(28, 84, 11);
+}
+
+main{
+    margin: 10px 20px;
 }
 
 footer {
@@ -50,11 +54,11 @@ a:visited{
 }
 
 a:hover {
-color: red;
-text-decoration: underline;
-background-color: white;
-font-weight: bold;
-transition: 600ms 300ms;
+    color: red;
+    text-decoration: underline;
+    background-color: white;
+    font-weight: bold;
+    transition: 600ms 300ms;
 }
 
 a:active {
