@@ -54,6 +54,23 @@
             output.style.color = textColor;
             output.style.border = borderThickness;
         }
+        function korz() {
+            let inputC = document.getElementById('numberC');
+            let inputD = document.getElementById('numberD');
+            let inputE = document.getElementById('numberE');
+            let inputF = document.getElementById('numberF');
+
+            let c = parseInt (inputC.value);
+            let d = parseInt(inputD.value);
+            let e = parseInt (inputE.value);
+            let f = parseInt(inputF.value);
+
+            let result =(c*100)+(d*80)+(e*100)+(f*300);
+            alert(' Рассчитать ' + result);
+            let output1 = document.getElementById('output1');
+            output1.innerHTML = 'Общая цена' + result;
+
+        }
     </script>
     
     <style>
@@ -73,6 +90,17 @@
             border: 1px solid;
             width: 300px;
             height: 40px;
+        }
+        #output1{
+            font-size: 15pt;
+            color: rgb(165, 21, 21);
+        }
+        .korz{
+            border: 9px ridge;
+            width: 350px;
+            height: 220px;
+            padding: 15px;
+
         }
     </style>
 </head>
@@ -95,8 +123,24 @@
             <input type='button' value="Кнопка 3" onclick="changeOutput(3, 'pink','black', 'double')">
             <input type='button' value="Кнопка 4" onclick="changeOutput(4, 'lightgreen','darkblue', 'dotted')">
         </div>
-        
         <div id="output"></div>
+        
+        <p></p>
+        <p></p>
+
+        <div class="korz">
+            <div><h1>Корзина товаров</h1></div>
+            <label>Яблоки(100р/шт):<input type="number" value="0" id="numberC"></label><br>
+            <label>Груши(80р/шт):<input type="number" value="0" id="numberD"></label><br>
+            <label>Апельсины(100р/шт):<input type="number" value="0" id="numberE"></label><br>
+            <label>Дыни(300р/шт):<input type="number" value="0" id="numberF"></label><br>
+            <input type="button" value="Рассчитать" onclick="korz()">
+            <div id="output1"></div>
+
+        </div>
+        
+        
+        
     </main>
    
     <footer onclick="showAuthor()"> 
