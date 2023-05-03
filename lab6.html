@@ -7,6 +7,21 @@
     <title>Залевская Ольга Сергеевна. Лабораторная 6</title>
     <link rel="stylesheet" href="main.css">
 
+    <style>
+        .game{
+            width: 400px;
+            height: 300px;
+            border-radius: 90px;
+            margin: auto;
+            cursor: pointer;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            border: 3px ridge;
+
+        }
+    </style>
+
 </head>
 <body>
     <header>
@@ -14,7 +29,34 @@
     </header>
     
     <main>
+        <div class="game">
+            <button>
+                Сыграть в игру
+            </button>
+        </div>
 
+        <div class="game">
+            <h1>Угадай число!</h1>
+            <div>
+                Задумано число от 1 до 100.Угадайте, какое? <br>
+                <input type="number" value="" min="1" max="100"><br>
+                <button>Угадать</button>
+                <div id="result"></div>
+            </div>
+        </div>
+
+        <div class="game">
+            <h1>Поздравляем, вы выиграли!</h1>
+            <div>
+                Задуманое число: <span id="number"></span>
+            </div>
+            <div>
+                Количество попыток:<span id="try-count"></span>
+            </div>
+            <div>
+                <button>Сыграть ещё раз</button>
+            </div>
+        </div>
     </main>
     
     <footer>
