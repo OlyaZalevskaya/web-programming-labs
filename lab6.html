@@ -28,6 +28,18 @@
             margin-bottom: 4%;
             padding: 2%;
         }
+        .yellow{
+            margin-left: 40%;
+            margin-right: 40%;
+            cursor: pointer;
+            text-align: center;
+            border: 2px ridge black;
+            margin-bottom: 4%;
+            padding: 20px;
+            background-color: yellow;
+            height: 60px;
+            width:170px ;
+        }
     </style>
     <script>
         let number;
@@ -82,6 +94,34 @@
             screens[1].style.display = 'none';
             screens[0].style.display = 'block'; 
         }
+        function changeColor(div) {
+            if(div.style.backgroundColor == 'yellow'){
+                div.style.backgroundColor = 'red';
+                div.style.color = 'black';
+                document.getElementById('color-name').innerHTML = 'красный';
+            }
+            else if(div.style.backgroundColor == 'red'){
+                div.style.backgroundColor = 'white';
+                div.style.color = 'red';
+                document.getElementById('color-name').innerHTML = 'белый';
+            }
+            else if(div.style.backgroundColor == 'white'){
+                div.style.backgroundColor = 'pink';
+                div.style.color = 'green';
+                document.getElementById('color-name').innerHTML = 'розовый';
+            }
+            else if(div.style.backgroundColor == 'pink'){
+                div.style.backgroundColor = 'green';
+                div.style.color = 'black';
+                document.getElementById('color-name').innerHTML = 'зеленый';
+            }
+            else {
+                div.style.backgroundColor = 'yellow';
+                div.style.color = 'black';
+                document.getElementById('color-name').innerHTML = 'желтый';
+            }
+
+        }
     </script>
 
 
@@ -133,6 +173,10 @@
                 <li>Убедитесь, что вводите правильный диапазон</li>
                 <li>Если хотите сыграть еще раз, нажмите кнопку "Сыграть еще раз"</li>
             </ol>
+        </div>
+        <div class="yellow" ondblclick="changeColor(this)">
+            Цвет:<span id="color-name">желтый</span><br>
+            Сделайте двойной щелчок, чтобы сменить цвет.
         </div>
     </main>
     
