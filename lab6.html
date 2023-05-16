@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="main.css">
 
     <style>
+        .footer{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+        }
         .game{
             border-radius: 50px;
             margin-left: 40%;
@@ -29,8 +35,7 @@
             padding: 2%;
         }
         .yellow{
-            margin-left: 40%;
-            margin-right: 40%;
+           
             cursor: pointer;
             text-align: center;
             border: 2px ridge black;
@@ -39,6 +44,20 @@
             background-color: yellow;
             height: 60px;
             width:170px ;
+        }
+        .a{
+            cursor: pointer;
+            text-align: center;
+            border: 2px ridge black;
+            float: left;
+            background-color: green;
+            color: bisque;
+            height: 100px;
+            width:170px ;
+            position: relative;
+            vertical-align: middle;
+            line-height: 90px;
+            transform: rotate();
         }
     </style>
     <script>
@@ -122,6 +141,22 @@
             }
 
         }
+        function sdvig(smena) {
+          if (smena.style.float == 'left') {
+              smena.style.float = 'right';
+              smena.style.transition = '100ms 1s';
+              if (smena.style.transform = 'rotate(0)'){
+                  smena.style.transform = 'rotate(4turn)'; 
+              } 
+          }  
+          else {
+            smena.style.float = 'left';
+            smena.style.transition = '100ms 1s';
+              if (smena.style.transform = 'rotate(4turn)'){
+                  smena.style.transform = 'rotate(0)';
+          }
+        }
+    }
     </script>
 
 
@@ -178,9 +213,12 @@
             Цвет:<span id="color-name">желтый</span><br>
             Сделайте двойной щелчок, чтобы сменить цвет.
         </div>
+        <div class="a" onclick="sdvig(this)">
+            Щёлкни меня
+        </div>
     </main>
     
-    <footer>
+    <footer class="footer">
         &copy; Залевская Ольга, ФБИ&ndash;14, 2 курс, 2023
      </footer>
 </body>
