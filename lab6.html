@@ -14,13 +14,14 @@
             margin-right: 40%;
             cursor: pointer;
             text-align: center;
-            font-size: 20px;
             border: 2px ridge;
-            margin-bottom: 40%;
+            margin-bottom: 4%;
+            padding: 2%;
         }
     </style>
     <script>
         let number;
+        let count = 0;
         function startGame() {
             number = Math.floor (Math.random() * 100) + 1;
             let screens = document.getElementsByClassName('game');
@@ -28,8 +29,38 @@
             screens[1].style.display = 'block';
         }
         function guess() {
+            count++;
             let input = document.getElementById('user-mumber');
             let userNumber =   parseInt(input.value);
+            let message = document.getElementById('result');
+             if (userNumber < number) {
+                message.innerHTML = 'Вы ввели слишком маленькое число';
+             }
+             else if (userNumber > number) {
+                message.innerHTML = 'Вы ввели слишком большое число';
+            }
+            else {
+                let screens = document.getElementsByClassName('game');
+                screens[1].style.display = 'none';
+                screens[2].style.display = 'block';
+                document.getElementById('number').innerHTML = number;
+                document.getElementById('try-count').innerHTML = count;
+            }
+            if(userNumber < 1) {
+                message.innerHTML = 'Число должно быть в диапазоне от 1 до 100';
+            }
+            else if (userNumber > 100) {
+                message.innerHTML = 'Число должно быть в диапазоне от 1 до 100';
+            }
+        }
+        function again() {
+            count=0;
+            let screens = document.getElementsByClassName('game');
+            screens[1].style.display = 'block';
+            screens[2].style.display = 'none';
+            number = Math.floor(Math.random() * 100) + 1;
+            document.getElementById('try-count').innerHTML = count;
+            document.getElementById('result').innerHTML = "";
         }
     </script>
 
@@ -51,7 +82,7 @@
             <h1>Угадай число!</h1>
             <div>
                 Задумано число от 1 до 100.Угадайте, какое? <br>
-                <input type="number" value="" min="1" max="100"><br>
+                <input type="number" value="" min="1" max="100" id="user-mumber"><br>
                 <button onclick="guess()">Угадать</button>
                 <div id="result"></div>
             </div>
@@ -66,7 +97,7 @@
                 Количество попыток:<span id="try-count"></span>
             </div>
             <div>
-                <button>Сыграть ещё раз</button>
+                <button onclick="again()">Сыграть ещё раз</button>
             </div>
         </div>
     </main>
