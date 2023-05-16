@@ -59,6 +59,17 @@
             line-height: 90px;
             transform: rotate();
         }
+        .block{
+            cursor: pointer;
+            text-align: center;
+            border: 2px ridge black;
+            float: left;
+            background-color: bisque;
+            height: 50px;
+            width:100px ;
+            position: relative;
+            top: 130px;
+        }
     </style>
     <script>
         let number;
@@ -157,6 +168,14 @@
           }
         }
     }
+    function block(k) {
+        if (parseInt(k.style.width)<=1000){
+            k.style.width = parseInt(k.style.width) +50 + 'px';   
+        }
+        else {
+            k.style.width = '100px'
+        }
+    }
     </script>
 
 
@@ -216,6 +235,7 @@
         <div class="a" onclick="sdvig(this)">
             Щёлкни меня
         </div>
+        <div class="block" onclick="block(this)"></div>
     </main>
     
     <footer class="footer">
