@@ -30,7 +30,11 @@ footer {
     padding: 10px; 
     font-size: 16pt; 
     font-style: italic; 
-    text-align: right
+    text-align: right;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 footer:hover{

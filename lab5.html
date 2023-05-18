@@ -19,7 +19,7 @@
         function showAuthor() {
             let author = 'Приветствую!\nАвтор страницы:\nЗалевская Ольга Сергевна';
             alert(author);
-    }
+        }
         function showR() {
             let inputA = document.getElementById('numberA');
             let inputB = document.getElementById('numberB');
@@ -68,13 +68,13 @@
             let result =(c*100)+(d*80)+(e*100)+(f*300);
             alert(' Рассчитать ' + result);
             let output1 = document.getElementById('output1');
-            output1.innerHTML = 'Общая цена ' + result + ' руб';
+            output1.innerHTML = 'Общая цена: ' + result + ' руб';
 
         }
         function removekrugi(number) {
             let del = document.getElementById(number)
             del.style.opacity = '0'
-}
+        }
 
     </script>
     
@@ -103,7 +103,7 @@
         .korz{
             border: 9px ridge;
             width: 300px;
-            height: 260px;
+            height: 280px;
             padding: 15px;
             
         }
@@ -161,16 +161,16 @@
         </div>
         
         <div class="krigi">
-        <div class="p" id="1" onclick="removekrugi(1)" style="background: blue; ">1</div>
-        <div class="p" id="2" onclick="removekrugi(2)" style="background: red ">2</div>
-        <div class="p" id="3" onclick="removekrugi(3)" style="background: rgb(0, 255, 0) ">3</div>
-        <div class="p" id="4" onclick="removekrugi(4)" style="background: rgb(206, 88, 88) ">4</div>
-        <div class="p" id="5" onclick="removekrugi(5)" style="background: rgb(0, 195, 255) ">5</div>
-        <div class="p" id="6" onclick="removekrugi(6)" style="background: rgb(255, 0, 55) ">6</div>
-        <div class="p" id="7" onclick="removekrugi(7)" style="background: rgb(255, 0, 170) ">7</div>
-        <div class="p" id="8" onclick="removekrugi(8)" style="background: rgb(11, 105, 39) ">8</div>
-        <div class="p" id="9" onclick="removekrugi(9)" style="background: rgb(204, 151, 151) ">9</div>
-        <div class="p" id="10" onclick="removekrugi(10)" style="background: rgb(105, 145, 117) ">10</div>
+            <div class="p" id="1" onclick="removekrugi(1)" style="background: blue; ">1</div>
+            <div class="p" id="2" onclick="removekrugi(2)" style="background: red ">2</div>
+            <div class="p" id="3" onclick="removekrugi(3)" style="background: rgb(0, 255, 0) ">3</div>
+            <div class="p" id="4" onclick="removekrugi(4)" style="background: rgb(206, 88, 88) ">4</div>
+            <div class="p" id="5" onclick="removekrugi(5)" style="background: rgb(0, 195, 255) ">5</div>
+            <div class="p" id="6" onclick="removekrugi(6)" style="background: rgb(255, 0, 55) ">6</div>
+            <div class="p" id="7" onclick="removekrugi(7)" style="background: rgb(255, 0, 170) ">7</div>
+            <div class="p" id="8" onclick="removekrugi(8)" style="background: rgb(11, 105, 39) ">8</div>
+            <div class="p" id="9" onclick="removekrugi(9)" style="background: rgb(204, 151, 151) ">9</div>
+            <div class="p" id="10" onclick="removekrugi(10)" style="background: rgb(105, 145, 117) ">10</div>
         </div>
         
     </main>
