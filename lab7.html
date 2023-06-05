@@ -73,6 +73,42 @@
                 umn.appendChild(table);
             }
         }
+        function Akziya() {
+            let data = ['02-06-2023', '01-06-2023', '31-05-2023', '30-05-2023', '29-05-2023',
+                        '26-05-2023', '25-05-2023', '24-05-2023', '23-05-2023', '22-05-2023'];
+            let kurs = [0.73, 0.73, 0.74, 0.72, 0.72, 0.73, 0.72, 0.72, 0.73, 0.72, 0.73];
+            let tab = document.getElementById('rossety');
+            for(let i = 0; i < data.length; i++){
+                let tr = document.createElement('tr');
+                let tdData = document.createElement('td');
+                tdData.innerHTML = data[i];
+                tr.appendChild(tdData);
+                let tdKurs = document.createElement('td');
+                tdKurs.innerHTML = kurs[i];
+                tr.appendChild(tdKurs);
+                let tdRazn = document.createElement('td');
+                if (i==0){
+                    tdRazn.innerHTML = '-';
+                }
+                else {
+                    tdRazn.innerHTML = (kurs[i]-kurs[i-1]).toFixed(2);
+                }
+                tr.appendChild(tdRazn);
+                tab.appendChild(tr);
+            }
+            let sum = 0;
+            for(let i = 0; i < kurs.length; i++) {
+                sum = sum + kurs[i];
+            }
+            let middle = sum / kurs.length;
+            document.getElementById('middle').innerHTML = 'Среднее значение: ' + middle;
+
+            let min = Math.min(...kurs);
+            document.getElementById('min').innerHTML = 'Минимальное значение: '+ min;
+
+            let max = Math.max(...kurs);
+            document.getElementById('max').innerHTML = 'Максимальное значение: ' + max;
+        }
     </script>
 </head>
 <body>
@@ -98,6 +134,12 @@
 
         <button onclick="UmnTable()">Таблица умножения на 98</button>
         <div id="umn"></div>
+
+        <button onclick="Akziya()">Курс акций Русолово</button>
+        <table border = '3' id ='rossety'></table>
+        <div id="middle"></div>
+        <div id="min"></div>
+        <div id="max" style="margin-bottom: 20px;"></div>
     </main>
 
     <footer>
