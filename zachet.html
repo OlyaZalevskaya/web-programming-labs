@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rez1{
+            border: 1px solid black;
+            width: 90%px;
+            height: 70px;
+            margin: 120px;
+            position: relative;
+            text-align: center;
+            
+            font-size: 20px;
+            color: red;
+        }
+        .a{
+            color: red;
+            width: 10%;
+            height: 40px;
+            left: 200px;
+            position: relative;
+            font-size: 20px;
+            border: 0;
+            background: white;
+        }
+        .a:active {
+            font-size: 15px; 
+        }
+        .b{
+            color: red;
+            margin: 70px;
+            width: 10%;
+            height: 40px;
+            left: 200px;
+            position: relative;
+            font-size: 20px;
+            border: 0;
+            background: white;
+        }
+        .b:active {
+            font-size: 15px; 
+        }
+        .c{
+            color: red;
+            margin: 70px;
+            width: 10%;
+            height: 40px;
+            left: 150px;
+            position: relative;
+            font-size: 20px;
+            border: 0;
+            background: white;
+        }
+        .c:active {
+            font-size: 15px; 
+        }
+        .p{
+            width: 35%;
+            height: 35px;
+            text-align: center;
+            margin: 30px 60px;
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+    <script>
+        function a() {
+            let pole = document.getElementById('pole');
+            let n = parseInt(pole.value);
+            if ( n > 0) {
+                let sum = 0;
+            for (let i = 1; i <= n; i--) {
+                sum += 1 / i;
+            }
+                let result = sum;
+                let rez = document.getElementById('rez');
+                rez.innerHTML = 'Результат ' + result;
+            }
+        }
+        function b() {
+            let pole = document.getElementById('pole');
+            let n = parseInt(pole.value);
+            if ( n > 0) {
+                let raz = 1;
+            for (let i = 1; i <= n; i++) {
+                raz = raz - 1 / i;
+            }
+                let result = raz;
+                let rez = document.getElementById('rez');
+                rez.innerHTML = 'Результат ' + result;
+            }
+        }
+        
+        function c(){
+            document.getElementById('pole').value = "";
+            document.getElementById('rez').innerHTML="Результат";
+        }
+    </script>
+</head>
+<body>
+    
+    <main>
+        <div class="rez1" id="rez">Результат</div>
+
+        <input class="p" type="number"  placeholder="Поле для ввода числа" id="pole"><br>
+
+        <button class="a" onclick="a()">Сумма</button>
+        <button class="b" onclick="b()">Разность</button>
+        <button class="c" onclick="c()">Сбросить</button>
+
+       
+
+    </main>
+</body>
+</html>
